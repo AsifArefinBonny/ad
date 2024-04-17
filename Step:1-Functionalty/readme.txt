@@ -11,6 +11,6 @@ I still believe this can be done but I'll need more time for that.
 
 Otherwise the script is working fine.
 
-To run the script please use Google Chrome. I didn't get the time to test the script with other browsers. My current chrome version is: Version 119.0.6045.123 (Official Build) (x86_64)
+To run the script please use Google Chrome. I didn't get the time to test the script with other browsers. My current chrome version is: Version 124.0.6367.62 (Official Build) (x86_64)
 
 Note: I've added a screendump of running the script in the folder.  
