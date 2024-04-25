@@ -9,10 +9,11 @@
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
-        <intProp name="ThreadGroup.num_threads">30</intProp>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="AD-GROUP">
+        <stringProp name="TestPlan.comments">Load Test</stringProp>
+        <intProp name="ThreadGroup.num_threads">20</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
-        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
           <stringProp name="LoopController.loops">1</stringProp>
@@ -44,92 +45,111 @@
           <stringProp name="WebDriverConfig.custom_capabilites"></stringProp>
         </com.googlecode.jmeter.plugins.webdriver.config.ChromeDriverConfig>
         <hashTree/>
-        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler">
-          <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler" enabled="false">
+          <stringProp name="WebDriverSampler.script">import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import java.util.concurrent.TimeUnit;
 
-// Initialize WebDriver
-WDS.browser.get(&quot;https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve&quot;);
+public class Main {
+    public static void main(String[] args) {
+        System.setProperty(&quot;webdriver.chrome.driver&quot;, &quot;path_to_chromedriver&quot;);
+        WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
 
-// Function to generate a random name
-String generateRandomName() {
-    String[] firstNames = {&quot;John&quot;, &quot;Jane&quot;, &quot;Mike&quot;, &quot;Emma&quot;, &quot;Tom&quot;, &quot;Sophia&quot;, &quot;Bob&quot;, &quot;Olivia&quot;};
-    String[] lastNames = {&quot;Smith&quot;, &quot;Doe&quot;, &quot;Johnson&quot;, &quot;Brown&quot;, &quot;Williams&quot;, &quot;Jones&quot;, &quot;Miller&quot;, &quot;Davis&quot;};
-    return firstNames[Math.floor(Math.random() * firstNames.length)] + &quot; &quot; + lastNames[Math.floor(Math.random() * lastNames.length)];
-}
+        try {
+            driver.get(&quot;https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve&quot;);
+            Thread.sleep(5000);
 
-// Function to generate a random Australian phone number
-String generateRandomAustralianPhoneNumber() {
-    return &quot;4&quot; + new Random().ints(0, 10).limit(8).collect(StringBuilder::new, StringBuilder::append, StringBuilder::append).toString();
-}
+            WebElement enquireButton = driver.findElement(By.xpath(&quot;//*[contains(text(), &apos;Enquire now&apos;)]&quot;));
+            Actions actions = new Actions(driver);
+            actions.moveToElement(enquireButton).click().perform();
+            Thread.sleep(2000);
 
-// Function to generate a random Australian postcode
-String generateRandomAustralianPostcode() {
-    String[] postcodes = {&quot;2000&quot;, &quot;2001&quot;, &quot;2002&quot;, &quot;2003&quot;, &quot;2004&quot;, &quot;2005&quot;, &quot;2006&quot;, &quot;2007&quot;, &quot;2008&quot;, &quot;2009&quot;,
-            &quot;2500&quot;, &quot;2501&quot;, &quot;2502&quot;, &quot;2503&quot;, &quot;2504&quot;, &quot;2505&quot;, &quot;2506&quot;, &quot;2507&quot;, &quot;2508&quot;, &quot;2509&quot;,
-            &quot;3000&quot;, &quot;3001&quot;, &quot;3002&quot;, &quot;3003&quot;, &quot;3004&quot;, &quot;3005&quot;, &quot;3006&quot;, &quot;3007&quot;, &quot;3008&quot;, &quot;3009&quot;,
-            &quot;4000&quot;, &quot;4001&quot;, &quot;4002&quot;, &quot;4003&quot;, &quot;4004&quot;, &quot;4005&quot;, &quot;4006&quot;, &quot;4007&quot;, &quot;4008&quot;, &quot;4009&quot;,
-            &quot;6000&quot;, &quot;6001&quot;, &quot;6002&quot;, &quot;6003&quot;, &quot;6004&quot;, &quot;6005&quot;, &quot;6006&quot;, &quot;6007&quot;, &quot;6008&quot;, &quot;6009&quot;,
-            &quot;7000&quot;, &quot;7001&quot;, &quot;7002&quot;, &quot;7003&quot;, &quot;7004&quot;, &quot;7005&quot;, &quot;7006&quot;, &quot;7007&quot;, &quot;7008&quot;, &quot;7009&quot;,
-            &quot;8000&quot;, &quot;8001&quot;, &quot;8002&quot;, &quot;8003&quot;, &quot;8004&quot;, &quot;8005&quot;, &quot;8006&quot;, &quot;8007&quot;, &quot;8008&quot;, &quot;8009&quot;};
-    return postcodes[new Random().nextInt(postcodes.length)];
-}
+            WebElement nameInput = driver.findElement(By.xpath(&quot;//*[@id=&apos;mat-input-16&apos;]&quot;));
+            nameInput.click();
+            nameInput.sendKeys(&quot;Test Asif&quot;);
 
-// Fill and submit the form
-boolean formSubmitted = false;
+            WebElement emailInput = driver.findElement(By.xpath(&quot;//*[@id=&apos;mat-input-17&apos;]&quot;));
+            emailInput.click();
+            emailInput.sendKeys(&quot;test@test.com&quot;);
 
-while (!formSubmitted) {
-    try {
-        WebElement enquireButton = WDS.browser.findElement(By.cssSelector(&quot;button.fullWidth.fullHeight&quot;));
-        enquireButton.click();
+            WebElement phoneInput = driver.findElement(By.xpath(&quot;//*[@id=&apos;phone&apos;]&quot;));
+            phoneInput.click();
+            phoneInput.sendKeys(&quot;123432344&quot;);
 
-        String randomName = generateRandomName();
-        WebElement nameInput = WDS.browser.findElement(By.cssSelector(&quot;input[formcontrolname=&apos;name&apos;]&quot;));
-        nameInput.sendKeys(randomName);
+            WebElement confirmPhoneInput = driver.findElement(By.xpath(&quot;//*[@id=&apos;mat-input-18&apos;]&quot;));
+            confirmPhoneInput.click();
+            confirmPhoneInput.sendKeys(&quot;123432344&quot;);
 
-        WebElement emailInput = WDS.browser.findElement(By.cssSelector(&quot;input[formcontrolname=&apos;email&apos;]&quot;));
-        emailInput.sendKeys(randomName.split(&quot; &quot;)[0].toLowerCase() + &quot;@test.com&quot;);
+            actions.keyDown(Keys.META).sendKeys(&quot;a&quot;).keyUp(Keys.META).perform();
+            Thread.sleep(1000);
+            actions.keyDown(Keys.META).sendKeys(&quot;c&quot;).keyUp(Keys.META).perform();
+            Thread.sleep(1000);
 
-        WebElement phoneInput = WDS.browser.findElement(By.id(&quot;phone&quot;));
-        phoneInput.sendKeys(generateRandomAustralianPhoneNumber());
+            WebElement preferredContactInput = driver.findElement(By.xpath(&quot;//*[@id=&apos;mat-input-21&apos;]&quot;));
+            preferredContactInput.click();
+            preferredContactInput.sendKeys(&quot;Downsizers&quot;);
 
-        WebElement postcodeInput = WDS.browser.findElement(By.cssSelector(&quot;input[formcontrolname=&apos;postCode&apos;]&quot;));
-        postcodeInput.sendKeys(generateRandomAustralianPostcode());
+            WebElement budgetInput = driver.findElement(By.xpath(&quot;//*[@id=&apos;mat-input-24&apos;]&quot;));
+            budgetInput.click();
+            budgetInput.sendKeys(&quot;$750k-$1m&quot;);
 
-        List&lt;WebElement&gt; selectFields = WDS.browser.findElements(By.cssSelector(&quot;select[formcontrolname]&quot;));
-        for (WebElement selectField : selectFields) {
-            List&lt;WebElement&gt; options = selectField.findElements(By.tagName(&quot;option&quot;));
-            int randomIndex = new Random().nextInt(options.size() - 1) + 1;
-            new Select(selectField).selectByIndex(randomIndex);
+            WebElement timeFrameInput = driver.findElement(By.xpath(&quot;//*[@id=&apos;mat-input-22&apos;]&quot;));
+            timeFrameInput.click();
+            timeFrameInput.sendKeys(&quot;6-12 months&quot;);
+
+            WebElement howDidYouHearInput = driver.findElement(By.xpath(&quot;//*[@id=&apos;mat-input-19&apos;]&quot;));
+            howDidYouHearInput.click();
+            howDidYouHearInput.sendKeys(&quot;Email&quot;);
+
+            WebElement lookingToInput = driver.findElement(By.xpath(&quot;//*[@id=&apos;mat-input-23&apos;]&quot;));
+            lookingToInput.click();
+            lookingToInput.sendKeys(&quot;Yes&quot;);
+
+            WebElement messageInput = driver.findElement(By.xpath(&quot;//*[@id=&apos;mat-input-20&apos;]&quot;));
+            messageInput.click();
+            messageInput.sendKeys(&quot;test&quot;);
+
+            WebElement submitButton = driver.findElement(By.xpath(&quot;//*[contains(text(), &apos;Submit Enquiry&apos;)]&quot;));
+            submitButton.click();
+            Thread.sleep(5000);
+
+            WebElement closeButton = driver.findElement(By.xpath(&quot;//*[@aria-label=&apos;Close&apos;]&quot;));
+            closeButton.click();
+            Thread.sleep(2000);
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            driver.quit();
         }
-
-        List&lt;WebElement&gt; checkboxes = WDS.browser.findElements(By.cssSelector(&quot;input[formcontrolname][type=&apos;checkbox&apos;]&quot;));
-        for (WebElement checkbox : checkboxes) {
-            checkbox.click();
-        }
-
-        WebElement addMessageLabel = WDS.browser.findElement(By.cssSelector(&quot;label.add-message-toggle&quot;));
-        addMessageLabel.click();
-
-        WebElement messageTextarea = WDS.browser.findElement(By.cssSelector(&quot;textarea[formcontrolname=&apos;message&apos;]&quot;));
-        messageTextarea.sendKeys(randomName.split(&quot; &quot;)[0] + &quot; functionality &quot; + iterationCount);
-
-        WebElement submitButton = WDS.browser.findElement(By.cssSelector(&quot;button.enquiry-submit&quot;));
-        submitButton.click();
-        formSubmitted = true;
-
-        WebElement closeButton = WDS.browser.findElement(By.cssSelector(&quot;img[alt=&apos;Close&apos;]&quot;));
-        closeButton.click();
-
-        formSubmitted = false;
-    } catch (Exception e) {
-        WDS.log.info(&quot;An error occurred: &quot; + e.getMessage());
-        break;
     }
 }
-
-WDS.sampleResult.sampleEnd();</stringProp>
+</stringProp>
           <stringProp name="WebDriverSampler.parameters"></stringProp>
           <stringProp name="WebDriverSampler.language">java</stringProp>
+        </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
+        <hashTree/>
+        <com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler guiclass="com.googlecode.jmeter.plugins.webdriver.sampler.gui.WebDriverSamplerGui" testclass="com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler" testname="jp@gc - WebDriver Sampler">
+          <stringProp name="WebDriverSampler.script">WDS.sampleResult.sampleStart();
+WDS.browser.get(&apos;https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve&apos;);
+
+// Wait for the &quot;Enquire now&quot; button to be present in the DOM
+var wait = new org.openqa.selenium.support.ui.WebDriverWait(WDS.browser, java.time.Duration.ofSeconds(30));
+var button = wait.until(org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated(org.openqa.selenium.By.cssSelector(&apos;button.mat-flat-button&apos;)));
+
+// Click the button
+button.click();
+
+WDS.sampleResult.sampleEnd();
+</stringProp>
+          <stringProp name="WebDriverSampler.parameters"></stringProp>
+          <stringProp name="WebDriverSampler.language">groovy</stringProp>
         </com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler>
         <hashTree/>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
@@ -166,7 +186,81 @@ WDS.sampleResult.sampleEnd();</stringProp>
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename"></stringProp>
+          <stringProp name="filename">resultTree.csv</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">resultSummary.csv</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">aggregateReport.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>

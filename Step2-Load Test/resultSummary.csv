@@ -1,0 +1,111 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1714011531296,56400,jp@gc - WebDriver Sampler,200,OK,AD-GROUP 1-4,text,true,,462392,0,20,20,https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve,0,0,0
+1714011533169,54307,jp@gc - WebDriver Sampler,200,OK,AD-GROUP 1-16,text,true,,462256,0,20,20,https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve,0,0,0
+1714011531547,90997,jp@gc - WebDriver Sampler,200,OK,AD-GROUP 1-20,text,true,,462140,0,18,18,https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve,0,0,0
+1714011531163,92643,jp@gc - WebDriver Sampler,200,OK,AD-GROUP 1-6,text,true,,462138,0,18,18,https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve,0,0,0
+1714011530971,143207,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=124.0.6367.62)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6f834e56bdfdd62d9c6c354317dd52eb, clickElement {id=f.73DE4AEF2FBBBAB2B45964D926FE660A.d.A0E7CE811F0ACDA6372FC7BB664181CA.e.3}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51010}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:51010/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (6f834e56bdfdd62d9c6c354317dd52eb)] -> css selector: button.mat-flat-button]
+Session ID: 6f834e56bdfdd62d9c6c354317dd52eb",AD-GROUP 1-11,text,false,,2285,0,16,16,null,0,0,0
+1714011531748,143806,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=124.0.6367.62)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [25d31ba428639a64f3d46e7a36fa2bb4, clickElement {id=f.E2E6269316F7E174F9D43C5DE1F4660A.d.C56E06CB81A0DCD12355E70B800558D9.e.3}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50994}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:50994/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on mac (25d31ba428639a64f3d46e7a36fa2bb4)] -> css selector: button.mat-flat-button]
+Session ID: 25d31ba428639a64f3d46e7a36fa2bb4",AD-GROUP 1-17,text,false,,2285,0,16,16,null,0,0,0
+1714011532025,143815,jp@gc - WebDriver Sampler,200,OK,AD-GROUP 1-19,text,true,,462053,0,15,15,https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve,0,0,0
+1714011532025,144638,jp@gc - WebDriver Sampler,200,OK,AD-GROUP 1-1,text,true,,462065,0,15,15,https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve,0,0,0
+1714011533169,183981,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [981a28d1ee1dd1930a0994577d6a0018, get {url=https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51001}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:51001/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 981a28d1ee1dd1930a0994577d6a0018",AD-GROUP 1-15,text,false,,1936,0,12,12,null,0,0,0
+1714011532506,184654,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f04a7f8d78c34f34ed14fb1525f491fe, get {url=https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50997}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:50997/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f04a7f8d78c34f34ed14fb1525f491fe",AD-GROUP 1-7,text,false,,1936,0,12,12,null,0,0,0
+1714011532443,184774,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [68795302ca1f67c466d098b67565f688, get {url=https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50960}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:50960/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 68795302ca1f67c466d098b67565f688",AD-GROUP 1-3,text,false,,1936,0,12,12,null,0,0,0
+1714011532421,184843,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [10ce637c229a5dde2c4b9de4d3830582, get {url=https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:50987/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 10ce637c229a5dde2c4b9de4d3830582",AD-GROUP 1-2,text,false,,1936,0,12,12,null,0,0,0
+1714011532406,185010,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [48b7bd2edabf9741d99f54c82d2b7c67, get {url=https://staging.a-d.com.au/new-apartments-developments/nsw/castle-hill-2154/grand-reve}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50966}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:50966/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 48b7bd2edabf9741d99f54c82d2b7c67",AD-GROUP 1-5,text,false,,1936,0,12,12,null,0,0,0
+1714011529754,187860,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a4bfac59080715a1935ed8c597a2e64d, get [url]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50990}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:50990/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a4bfac59080715a1935ed8c597a2e64d",AD-GROUP 1-14,text,false,,1892,0,12,12,null,0,0,0
+1714011531541,186090,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [61386806fa839a9e6a3f46a8ec6ea9e1, get [url]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50974}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:50974/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 61386806fa839a9e6a3f46a8ec6ea9e1",AD-GROUP 1-13,text,false,,1892,0,12,12,null,0,0,0
+1714011531515,186160,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [995fa91328f2e0b93bf5a703a2e303bf, get [url]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50976}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:50976/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 995fa91328f2e0b93bf5a703a2e303bf",AD-GROUP 1-10,text,false,,1892,0,12,12,null,0,0,0
+1714011530729,186946,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [78d3ae32f9cace718b5a168f8eca11c7, get [url]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50998}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:50998/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78d3ae32f9cace718b5a168f8eca11c7",AD-GROUP 1-9,text,false,,1892,0,12,12,null,0,0,0
+1714011530906,186805,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [313a6cc1c4cc29edaa14fca57fa54919, get [url]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50999}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:50999/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 313a6cc1c4cc29edaa14fca57fa54919",AD-GROUP 1-18,text,false,,1892,0,12,12,null,0,0,0
+1714011531749,185950,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [639925ccf70b14ff96f04860c140ca11, get [url]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50975}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:50975/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 639925ccf70b14ff96f04860c140ca11",AD-GROUP 1-8,text,false,,1892,0,12,12,null,0,0,0
+1714011531046,186656,jp@gc - WebDriver Sampler,500,"javax.script.ScriptException: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f84fe9c3d801d022082b87280c235b4c, get [url]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.62, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: /var/folders/5q/92_j16ds1zx...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50972}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(system), se:cdp: ws://localhost:50972/devtoo..., se:cdpVersion: 124.0.6367.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f84fe9c3d801d022082b87280c235b4c",AD-GROUP 1-12,text,false,,1892,0,12,12,null,0,0,0
